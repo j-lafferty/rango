@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% load static %}
+
 <html>
     <head>
         <title>Rango</title>
@@ -12,6 +15,8 @@
         </div>
         <div>
             <a href="/rango/about/">About</a><br />
+            <img src="{% static 'images/django.png' %}"
+                 alt='Django Logo' />
         </div>
     </body>
 </html>
