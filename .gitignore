@@ -1,5 +1,14 @@
-# env secret keys
+# secret keys
 .env
+*.key
+
+# database
+db.sqlite3
+
+# cache files
+__pycache__/
 
 # misc
 .DS_Store
+thumbs.db
+.pyc
