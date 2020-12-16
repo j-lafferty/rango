@@ -1,5 +1,5 @@
 # secret keys
-.env
+.env.py
 *.key
 
 # database
