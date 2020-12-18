@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 
@@ -6,6 +7,15 @@ class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
+    slug = models.SlugField()
+
+    # Override save() to call slugify().
+    # This will convert URLs with sapces to kebab case, instead of percent-encoded.
+    # eg: '/home page'; '/home%20page'; '/home-page'
+    # improves readability.
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Category, self).save(*args, **kwargs)
 
     # Disply plural spelling of Category within the admin interface
     class Meta:
