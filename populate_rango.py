@@ -37,7 +37,7 @@ def populate():
 
     django_pages = [
         {'title': 'Official Django Tutorial',
-         'url': 'https://docs.djangoproject.com/en/2.1/intro/tutorial101/',
+         'url': 'https://docs.djangoproject.com/en/3.1/intro/tutorial01/',
          'views': 58},
         {'title': 'Django Rocks',
          'url': 'http://www.djangorocks.com/',
